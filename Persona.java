@@ -6,12 +6,12 @@ public class Persona {
     /**
      * Imposta nome e cognome.
      * 
-     * @param n nome
-     * @param c cognome
+     * @param nome nome
+     * @param cognome cognome
      */
-    public void setNome(String n, String c) {
-        nome = n;
-        cognome = c;
+    public Persona(String nome, String cognome) {
+        this.nome = nome;
+        this.cognome = cognome;
     }
 
     /** Stampa nome e cognome. */

@@ -1,11 +1,10 @@
 /**
- * Classe con metodo main per la gerarchia Studente e Persona
+ * Classe con metodo main che istanzia Studente e Persona e ne chiama i metodi
  */
 public class MainEsami {
 
     public static void main(String[] args) {
-        Studente s = new Studente();
-        s.setNome("Alan", "Rossi"); // metodo della superclasse di s
+        Studente s = new Studente("Alan", "Rossi");
         s.setMatr("M12345");
         s.nuovoEsame("Italiano", 8); // metodo della classe di s
         s.nuovoEsame("Fisica", 7);
@@ -17,8 +16,7 @@ public class MainEsami {
     private static void testUno(Studente s) {
         System.out.println("Dopo l'assegnazione a p di tipo Persona");
         Persona p = s;
-        // p.nuovoEsame("ita", 25);
-        s.nuovoEsame("m", 29);
+        s.nuovoEsame("Inglese", 9);
         // p e' dichiarato di tipo Persona
         // a runtime p punta all'istanza s
         p.printAll();

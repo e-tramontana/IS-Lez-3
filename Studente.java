@@ -8,6 +8,10 @@ public class Studente extends Persona {
     private String matr;
     private List<Esame> esami = new ArrayList<>();
 
+    public Studente(String nome, String cognome) {
+        super(nome, cognome);
+    }
+
     /**
      * Imposta la matricola.
      */
@@ -36,7 +40,7 @@ public class Studente extends Persona {
             return 0;
         float sum = 0;
         for (Esame e : esami)
-            sum += e.getVoto();
+            sum += e.voto();
         return sum / esami.size();
     }
 
@@ -46,7 +50,7 @@ public class Studente extends Persona {
         super.printAll();
         System.out.println("matr: " + matr);
         for (Esame e : esami)
-            System.out.println(e.getMateria() + ": " + e.getVoto());
+            System.out.println(e.materia() + ": " + e.voto());
         System.out.println("media: " + getMedia());
     }
 }
